@@ -1,75 +1,106 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sensorika - Tizimlar va Avtomatika</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-  <style>
-    /* Reset & Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
-    a { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul { list-style: none; }
-    img { max-width: 100%; display: block; }
-
-    /* Header & Navbar */
-    header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-    .header-container { max-width: 1200px; margin: 0 auto; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-size: 1.8rem; font-weight: bold; color: #007bff; }
-    .nav { position: relative; }
-    .nav__list { display: flex; gap: 1.5rem; }
-    .nav__link { font-weight: 500; padding: 0.5rem; }
-    .nav-toggle { background: none; border: none; cursor: pointer; display: none; }
-    .hamburger, .hamburger::before, .hamburger::after {
-      content: ""; display: block; width: 24px; height: 3px; background: #333; border-radius: 2px; transition: all 0.3s ease;
-    }
-    .hamburger::before { transform: translateY(-8px); }
-    .hamburger::after  { transform: translateY(8px); }
-    .nav.open .hamburger { background: transparent; }
-    .nav.open .hamburger::before { transform: rotate(45deg); }
-    .nav.open .hamburger::after  { transform: rotate(-45deg); }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      .nav-toggle { display: block; }
-      .nav__list {
-        position: absolute; top: 100%; right: 0; background: #fff;
-        flex-direction: column; width: 200px; border: 1px solid #e0e0e0;
-        transform: translateY(-20px) scaleY(0); transform-origin: top;
-        transition: transform 0.3s ease; opacity: 0; pointer-events: none;
-      }
-      .nav__item + .nav__item { border-top: 1px solid #e0e0e0; }
-      .nav.open .nav__list { transform: translateY(0) scaleY(1); opacity: 1; pointer-events: auto; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FXCLUB ЛИЧНЫЙ БЛОГ</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 </head>
-<body>
-  <header>
-    <div class="header-container">
-      <a href="/" class="logo">Sensorika</a>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#services" class="nav__link">Xizmatlar</a></li>
-          <li class="nav__item"><a href="#courses"  class="nav__link">Kurslar</a></li>
-          <li class="nav__item"><a href="#about"    class="nav__link">Biz Haqimizda</a></li>
-          <li class="nav__item"><a href="#contact"  class="nav__link">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+</body>
 
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    navToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-  </script>
+  <nav class="navbar">
+    <div class="logo">
+      <h1>FXCLUB</h1>
+      <span>ЛИЧНЫЙ БЛОГ</span>
+    </div>
+    <ul class="nav-icons">
+      <li><i class="fas fa-home"></i></li>
+      <li><i class="fas fa-heart"></i></li>
+      <li><i class="fas fa-th-large"></i></li>
+      <li><i class="fas fa-clock"></i></li>
+      <li><i class="fas fa-search"></i></li>
+      <li><i class="fas fa-user-circle"></i></li>
+      <li><i class="fas fa-moon"></i></li>
+    </ul>
+  </nav>
+<main class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="3ds-max-2021-badge-2048px1.jpg" alt="3DS Max" />
+      <div class="card-info">
+        <div class="meta">🕒 0 Bir necha soat oldin • 👁️ 0 </div>
+        <h3>3DsMAX/Corona Renderer/Marvelous designer</h3>
+        <div class="author">
+          <img src="https://fxclub.uz/images/1726656671.jpg" alt="avatar" />
+          <span>fxclub ✔️</span> <span class="likes">🤍 </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="badge">Рекомендация</div>
+      <img src="./222222222.webp" alt="AutoCAD License" />
+      <div class="card-info">
+        <div class="meta">🕒 0 Bir necha soat oldin • 👁️ 0 </div>
+        <h3>Если сервера Автокада блокируют вашу лицензию</h3>
+        <p>AutoCAD</p>
+        <div class="author">
+          <img src="https://fxclub.uz/images/1726656671.jpg" alt="avatar" />
+          <span>fxclub ✔️</span> <span class="likes">🤍 </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="badge">Плагины для 3DsMAX</div>
+      <img src="https://i.ytimg.com/vi/-lnCSBEML0w/maxresdefault.jpg" alt="Chaos Cosmos" />
+      <div class="card-info">
+        <div class="meta">🕒 0 Bir necha soat oldin • 👁️ 0 </div>
+        <h3>Если Chaos Cosmos browser перестал работать</h3>
+        <p>Chaos Group</p>
+        <div class="author">
+          <img src="https://fxclub.uz/images/1726656671.jpg" alt="avatar" />
+          <span>fxclub ✔️</span> <span class="likes">🤍 </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="badge">Плагины для 3DsMAX</div>
+      <img src="https://i.ytimg.com/vi/-lnCSBEML0w/maxresdefault.jpg" alt="Chaos Cosmos" />
+      <div class="card-info">
+        <div class="meta">🕒 0 Bir necha soat oldin• 👁️ 0 </div>
+        <h3>Если Chaos Cosmos browser перестал работать</h3>
+        <p>Chaos Group</p>
+        <div class="author">
+          <img src="https://fxclub.uz/images/1726656671.jpg" alt="avatar" />
+          <span>fxclub ✔️</span> <span class="likes">🤍 </span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Card 5 -->
+    <div class="card">
+      <div class="badge">Плагины для 3DsMAX</div>
+      <img src="./upg.webp" alt="Corona Render" />
+      <div class="card-info">
+        <div class="meta">🕒 0 Bir necha soat oldin • 👁️ 0</div>
+        <h3>Почему именно магазин upg.uz?</h3>
+        <div class="author">
+          <img src="https://fxclub.uz/images/1726656671.jpg" alt="avatar" />
+          <span>fxclub ✔️</span> <span class="likes">🤍 </span>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
